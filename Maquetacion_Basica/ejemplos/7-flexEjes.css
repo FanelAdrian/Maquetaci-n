@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.padre{
+    /* para usar las propiedades flex */
+    display: flex;
+
+    /* define el eje principal */
+    flex-direction: row;
+
+    /* alinea los elementos segun el eje principal. 
+    Solo para 1 linea de elementos */
+    justify-content: center;
+
+    /* distrubucion de elementos segun eje secundario
+    -solo para cuando trabajamos con 1 linea de elementos */
+    align-items: center;
+
+    /* para trabajar con distintas lineas de elementos */
+    flex-wrap: wrap;
+
+    /* se usa cuando trabajamos con wraps o mas de 
+    una linea de elementos */
+    align-content: flex-start;
+
+    /* espaciado entre elemntos */
+    gap: 20px;
+
+    /* propiedad para borde: grosor solido color - Podemos
+    utilizarlo sara definir contenedores*/
+    border: 1px solid red;
+    height: 600px;
+    width: 600px;
+}
+
+.hijo{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.hijo--red{
+    background-color: red;
+}
+.hijo--yellow{
+    background-color: yellow;
+    order: -2;
+}
+
+
+/* .padre2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* trabaja con el eje complementario */
+    /* align-items: center;
+    border: 1px solid red;
+}
+
+.padre{
+    display: flex;
+    flex-direction: row; */
+    /* porpiedades en base al eje principal */
+    /* justify-content: center;
+    
+    border: 1px solid red;
+} */
+/* .padre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; */
+    /* hace que los elemntos e coloque unos debajo de otrs
+    por defecto viene como non-wrap(esto hace que los elemntos se
+    reduzcan si no caben en el contenedor padre */
+    /* flex-wrap: wrap;
+ 
+    width: 700px;
+    height: 600px;
+    border: 1px solid red;
+    gap: 50px;
+}
+ .padre{
+    width: 700px;
+    height: 600px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+} */
+
+/* 
+.hijo--green{
+    background-color: green;
+    order: -2;
+} */

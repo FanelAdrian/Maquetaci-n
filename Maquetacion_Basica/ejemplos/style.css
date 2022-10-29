@@ -1,0 +1,19 @@
+/* limpiadores : resetean los valores predefinidos de la pag */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blue;
+}
+
+
+/* especificidad */
+/* 
+important => !important
+style     => style, html
+id        => #id
+class     => .class
+elemeto   => header, div (etiquetas) */
+
