@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.gridContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+.a{
+    background-color: greenyellow;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.b {
+    background-color: orange;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.c {
+    background-color: orangered;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.d {
+    background-color: red;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.e{
+    background-color: blue;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.f{
+    background-color: yellow;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.gridContainer{
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: [x0]2fr [x1]1fr [x2]2fr [x3]2fr [x4]1fr [x5]2fr;
+    grid-template-rows: [y0]2fr [y1]1fr [y2]2fr [y3]2fr [y4]1fr [y5]2fr;
+ */
+    grid-area: 
+    ;
+}
+
+.a{
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+    /* grid-column-start: x0 ;
+    grid-column-end: x1 ;
+    grid-row-start: y0 ;
+    grid-row-end: y1; */
+}
+.b {
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    /* grid-row-start: ;
+    grid-row-end: ; */
+}
+.c {
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+
+}
+.d {
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.e{
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+}
+.f{
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
