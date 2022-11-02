@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+.main__body {
+ 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:auto;
+}
+
+.nav {
+
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 84px;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__logo {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 84px;
+
+}
+
+.nav__a {
+
+    display: flex;
+    flex-direction: row;
+    height: 84px;
+    width: 60%;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.nav__a__a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav__a__a1 {
+    background-color: #0000ff;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+.header{
+    background-image: url(img/bootcamp-desarrollo-web-y-movil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+}
+.header__title{
+    color: #ffffff;
+    font-size: 64px;
+    padding: 30px;
+}
+
+.header__text{
+    color: #ffffff;
+    font-size: 24px;
+    padding: 30px;
+}
+.header__button{
+    background-color: #0000ff;
+    margin: 20px;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.article__full{
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+.article__full__img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.article__full__img__1{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+.article__full__info{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.article__full__title{
+    font-size: 32px;
+}
+.article__full__text__title{
+    font-weight: bold;
+}
+.article__full__table{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid rgb(235, 235, 235);
+}
+.article__full__table__text{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.article__fullStack{
+    background-color: black;
+    padding: 80px;
+}
+.article__fullStack__title{
+    color: #ffffff;
+    font-size: 48px;
+    padding: 0px;
+    padding: 50px 0px;
+}
+.article__fullStack__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ 
+}
+.article__fullStack__info__text{
+    width: 100%;
+    height: 100%;
+}
+.article__fullStack__info__tex__p{
+    color: #ffffff;
+    font-size: 20px;
+}
+.article__fullStack__info__img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.article__fullStack__info__img1{
+    height: 50%;
+    width: 50%;
+}
+.article__fullStack__price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.article__fullStack__price__text{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 50px 0 ;
+}
+.article__fullStack__price__text__1{
+    color: #ffffff;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.article__fullStack__price__text__2{
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.section__data{
+    background-image: url(img/bootcamp-desarrollo-web-y-movil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+.section__data__text{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+.section__data__text__title{
+    font-size: 64px;
+    color: #ffffff;
+}
+.section__data__text__p{
+    font-size: 24px;
+    color: #ffffff;
+}
+.section__data__info{
+    width: 30%;
+    background-color: #ffffff;
+}
+.section__data__2{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.section__data__2__text{
+    color: #ffffff;
+    font-size: 20px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__data__2__text{
+    color: #ffffff;
+    font-size: 20px;
+}
+.section__data__2__img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.section__data__2__img1{
+    width: 50%;
+    height: 100%;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: black;
+    height: 84px;
+}
+.footer__text{
+    width: 100%;
+    height: 84px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+.footer__redes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 84px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 30px;
+}
+.footer__redes__box{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 10px; 
+}
+
+.footer__redes__icon{
+    width: 50px;
+    height: 50px;
+}
