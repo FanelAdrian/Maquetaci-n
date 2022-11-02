@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.gridContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
+    grid-template-rows: 60%;
+
+}
+
+.a{
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+
+}
+.b {
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+
+}
+.c {
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+
+}
+.d {
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.e{
+    background-color: greenyellow;
+    font-size: x-large;
+    text-align: center;
+}
+.f{
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
