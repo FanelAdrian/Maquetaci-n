@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norte y Sur Viajes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_travel1.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <main class="main">
+        <nav class="nav">
+            <div class="logo__box">
+                <img src="img/Capturalogo-removebg-preview.png" alt="" class="logo">
+            </div>
+            <div class="zona">
+
+                <a href="#norte" class="zona__norte">NORTE</a>
+                <a href="#sur" class="zona__sur">SUR</a>
+                <a href="#reserva" class="zona__reserva">RESERVA</a>
+            </div>
+        </nav>
+        <header class="spain">
+
+            <div class="spain__norte">
+                <h2 class="title__norte">CONOCE EL NORTE</h2>
+            </div>
+            <div class="spain__sur">
+                <h2 class="title__sur">CONOCE EL SUR</h2>
+            </div>
+        </header>
+        <section class="section" id="reserva">
+            <div class="section__formulario">
+                <h2 class="section__formulario__title">¿Donde vamos?</h2>
+                <form action="" class="section__formulario__form">
+                    <div class="text">
+                        <label for="text1" class="label__text">Nombre </label>
+                        <input id="nombre" type="text1" placeholder="Nombre">
+                    </div>
+                    <div class="text">
+                        <label for="text2" class="label__text">Origen</label>
+                        <input id="origen" type="text2" placeholder="Origen">
+                    </div>
+                    <div class="text">
+                        <label for="text3" class="label__text">Destino</label>
+                        <input id="destino" type="text3" placeholder="Destino">
+                    </div>
+                    <div class="text">
+                        <label for="text4" class="label__text">Nº pasajeros</label>
+                        <input id="pasajeros" type="number" placeholder="Numero de viajeros" min="1">
+                    </div>
+                    <div class="text">
+                        <label for="text5" class="label__text">Fecha</label>
+                        <input id="fecha" type="date" placeholder="fecha">
+
+                    </div>
+                    <button class="button" onclick="solicitarInfo()" type="button">Solicitar Información</button>
+                    <button class="button" onclick="viajesOferta()" type="button">Filtrar</button>
+                </form>
+            </div>
+            <div class="alerta" id="alerta">
+                <h2 class="destino__h2">Le aseguramos el mejor precio!</h2>
+            </div>
+        </section>
+        <div class="ofertas">
+
+            <div class="isla__canarias">
+                <h2 class="ofertas__title">Visita Mallorca al mejor <span class="ofertas__price">Precio</span></h2>
+                <p>Dolor sit amet, consectetur adipisicing elit. Veniam sunt alias aperiam. Ipsum cumque repellat id
+                    odio tenetur corrupti hic alias. Nostrum praesentium accusantium quisquam deserunt qui est suscipit
+                    ex!</p>
+                <img src="img/shutterstock_678365881.jpg" alt="" class="img__canarias">
+            </div>
+            <div class="isla__baleares">
+                <h2 class="ofertas__title align__title">Visita La Palma al mejor <span
+                        class="ofertas__price">Precio</span></h2>
+                <p>Dolor sit amet, consectetur adipisicing elit. Veniam sunt alias aperiam. Ipsum cumque repellat id
+                    odio tenetur corrupti hic alias. Nostrum praesentium accusantium quisquam deserunt qui est
+                    suscipit
+                    ex!</p>
+                <img src="img/5e93aebf-bd88-4b50-b4e8-a3fcaaeb271d.webp" alt="" class="img__baleares">
+            </div>
+        </div>
+        </div>
+        <section class="destinos">
+            <h2 class="title__norte" id="norte">CONOCE EL NORTE</h2>
+            <div class="destinos__norte">
+                <div class="destinos__tarjetas">
+                    <img src="img/d6e0c4cb-cbf6-4ba7-86ab-4819d637b676.webp" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Asturias</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 250€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/shutterstock_678365881.jpg" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Mallorca</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 150€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/Espana_SanSebastian_shutterstock_126481607_Botond Horvath_Shutterstock.jpg" alt=""
+                        class="tarjetas__img">
+                    <h3 class="destino__h3">Pais Vasco</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 200€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/US_Galicia_ES_Header.webp" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Galicia</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 95€</h2>
+                </div>
+            </div>
+            <h2 class="title__sur" id="sur">CONOCE EL SUR</h2>
+            <div class="destinos__norte">
+                <div class="destinos__tarjetas">
+                    <img src="img/5e93aebf-bd88-4b50-b4e8-a3fcaaeb271d.webp" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Canarias</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 335€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/Granada-bezienswaardigheden-het-Alhambra-scaled.jpg" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Granada</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 300€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/AIRE Ancient Baths Sevilla_09A4776.webp" alt=""
+                        class="tarjetas__img">
+                    <h3 class="destino__h3">Sevilla</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 185€</h2>
+                </div>
+                <div class="destinos__tarjetas">
+                    <img src="img/GettyImages-1270863248.webp" alt="" class="tarjetas__img">
+                    <h3 class="destino__h3">Cadiz</h3>
+                    <p class="destino__p">expedita fugit accusantium in molestias est atque, pariatur possimus accusamus
+                        cum?</p>
+                    <h2 class="destino__h2"> 295€</h2>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <footer class="footer">
+             <h5>De Norte a Sur - © copyrigth 2022</h5>
+        </footer>
+    </main>
+    <script src="travelScript.js"></script>
+</body>
+
+</html>

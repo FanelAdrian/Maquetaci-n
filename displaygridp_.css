@@ -1,0 +1,32 @@
+.gridContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+
+
+}
+
+.a{
+    background-color: rgb(193, 243, 12);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.b {
+    background-color: rgb(5, 197, 21);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.c {
+    background-color: rgb(4, 172, 68);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+.d {
+    background-color: rgb(1, 129, 76);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
