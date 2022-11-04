@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+.main__body {
+ 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:auto;
+}
+
+.header{
+    background-image: url(img/image.png) ;
+}
+
+.titulo{
+    align-content: center;
+    align-items: center;
+    font-size: large;
+    height: 50%;
+}
+
+h1{
+    color: azure;
+    font-size: 50px;
+}
+.blue{
+    color: rgb(0, 0, 255);
+    padding: 0px 50px;
+}
+.yellow{
+    color: rgb(255, 217, 0);
+    padding: 0px 50px;
+}
+.section__formulario__title{
+    color: orange;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ofertas{
+    border: 2px solid red;
+
+}
+.viajes_norte{
+    border: 2px solid rebeccapurple;
+    height: px;
+    display: flex;
+    flex-direction: row;
+}
+.viajes_zona{
+    border: 2px solid rebeccapurple;
+    height: 100%;
+    width: 100%;
+}
+.viajes_sur{
+    border: 2px solid rebeccapurple;
+    height: px;
+    display: flex;
+    flex-direction: row;
+}
