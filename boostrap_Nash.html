@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Nash con Boostrap</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- barra nav -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(4,4,4,255); padding: 0 20px; ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#"><img src="img/nash!.png" alt="" width="" height=""
+                        style=" padding: 0px 10px; height: 60px;" "></a>
+                <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Ultimas llegadas</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorias
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Verano</a></li>
+                                    <li><a class="dropdown-item" href="#">Otoño</a></li>
+                                    <li><a class="dropdown-item" href="#">Primavera</a></li>
+                                    <li><a class="dropdown-item" href="#">Invierno</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-light" href="#" onclick="mostrarCarrito()" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" role="button" style="padding: 0 10px;">CARRITO</a>
+                    </button>
+            </div>
+        </nav>
+
+        <!--tarjetas  -->
+
+        <div class="container d-flex mt-5 justify-content-space-between d-grid gap-8">
+            <nav class="container" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem; padding: 10px;">
+                    <img src="img/pantalones_tallealto.png" class="card-img-top" alt="..." ">
+                    <div class=" card-body">
+                    <h5 class="card-title" id="Product_1_name">pantalon sueltogris</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <h6 style="padding-bottom: 10px;"><span id="Product_1_price">20</span><span>€</span></h6>
+                    <a href="#" class="btn btn-primary" style="background-color:black; border: none" onclick="añadirCarrito('Product_1_name','Product_1_price')">Añadir al carrito
+                    </a>
+                </div>
+        </div>
+        </nav>
+        <nav class="container" style="padding-top: 20px;">
+            <div class="card" style="width: 18rem; padding: 10px;">
+                <img src="img/vestido_tunico.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="Product_2_name">Vestido Túnico</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <h6 style="padding-bottom: 10px;"><span id="Product_2_price">18</span><span>€</span></h6>
+                    <a href="#" class="btn btn-primary" style="background-color:black; border: none" onclick="añadirCarrito('Product_2_name','Product_2_price')">Añadir al
+                        carrito</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="container" style="padding-top: 20px;">
+            <div class="card" style="width: 18rem; padding: 10px;">
+                <img src="img/falda_print.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="Product_3_name">Falda Mid Print</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <h6 style="padding-bottom: 10px;"><span id="Product_3_price">12</span><span>€</span></h6>
+                    <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_3_name','Product_3_price')">Añadir al
+                        carrito</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="container" style="padding-top: 20px;">
+            <div class="card" style="width: 18rem; padding: 10px;">
+                <img src="img/cardigan_largo_rayas.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="Product_4_name">Cardigan Largo Rayas</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                    <h6 style="padding-bottom: 10px;"><span id="Product_4_price">22</span><span>€</span></h6>
+                    <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_1_name','Product_4_price')">Añadir al
+                        carrito</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div class="container d-flex mt-5 justify-content-space-between d-grid gap-8">
+        <nav class="container" style="padding-top: 20px;">
+            <div class="card" style="width: 18rem; padding: 10px;">
+                <img src="img/falda_mini_zebra.png" class="card-img-top" alt="..." ">
+                <div class=" card-body">
+                <h5 class="card-title" id="Product_5_name">Falda Mini Zebra</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+                <h6 style="padding-bottom: 10px;"><span id="Product_5_price">14</span><span>€</span></h6>
+                <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_5_name','Product_5_price')">Añadir al carrito</a>
+            </div>
+    </div>
+    </nav>
+    <nav class="container" style="padding-top: 20px;">
+        <div class="card" style="width: 18rem; padding: 10px;">
+            <img src="img/mono_overol.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" id="Product_6_name">Mono Overol</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+                <h6 style="padding-bottom: 10px;"><span id="Product_6_price">24</span><span>€</span></h6>
+                <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_6_name','Product_6_price')">Añadir al carrito</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="container" style="padding-top: 20px;">
+        <div class="card" style="width: 18rem; padding: 10px;">
+            <img src="img/vestido_jersey.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" id="Product_7_name">Vestido Jersei</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+                <h6 style="padding-bottom: 10px;"><span id="Product_7_price">32</span><span>€</span></h6>
+                <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_7_name','Product_7_price')">Añadir al carrito</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="container" style="padding-top: 20px;">
+        <div class="card" style="width: 18rem; padding: 10px;">
+            <img src="img/pantalon_ancho.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" id="Product_8_name">Pantalón anchos</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+                <h6 style="padding-bottom: 10px;"><span id="Product_8_price">28</span><span>€</span></h6>
+                <a href="#" class="btn btn-primary" style="background-color:black; border: none"  onclick="añadirCarrito('Product_8_name','Product_8_price')">Añadir al carrito</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Precio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <h3 class="d-flex flex-row-reverse" id="precioTotal" style=" padding-right: 20px;" ></h3>
+                <div class="modal-footer">
+                    <button type="button" class="btn mb-2 btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn mb-2 btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- javascript del boostrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="nashScript.js"></script>
+</body>
+
+</html>
