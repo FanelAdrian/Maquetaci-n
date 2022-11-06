@@ -24,6 +24,11 @@ const mostrar = (destinos) =>{
     const alerta = document.getElementById("alerta");
     for( let destino of destinos){
         let h4 = document.createElement("h4");
+<<<<<<< HEAD
+=======
+        // en este caso usamos .innerHTML para poder diferenciar que no es "solo" un string
+        // si no que tiene mas propiedades HTML.
+>>>>>>> dia7
         h4.innerHTML = `NOMBRE: ${destino.nombre}&nbsp &nbsp &nbsp
                          ORIGEN: ${destino.origen}&nbsp &nbsp &nbsp    
                          DESTINO: ${destino.destino}&nbsp &nbsp &nbsp  
