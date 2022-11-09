@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>imdb</title>
+</head>
+
+<body >
+
+  <div class="container-fluid"  style="padding: 0;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark bg-darken-lg" style="padding: 0 20px ;">
+      <a class="navbar-brand text-light" href="IMDB.html"><img
+          src="img/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE_._V1_-removebg-preview.png" alt="100vh" width="100vw"
+          height="" style=" padding: 0px 10px; height: 60px;" "></a>
+        <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-sm-between" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="IMDB_Peliculas.html">Peliculas</a>
+            </li>
+          </ul>
+          <form class="form-inline my-3 my-lg-0 " style="flex-direction: row; display: flex; gap: 10px;">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+              style="color: rgb(219, 219, 21); border: 1px solid yellow;">Search</button>
+          </form>
+        </div>
+    </nav>
+  </div>
+
+
+  <div class="container" style="padding: 40px 0px;">
+    <div class="title">
+      <h2 class="title"> </h2>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://imgs.search.brave.com/pmg37-yzysxvHHKB87GhMCC1DKRUrjJIn0OihIpz5Sk/rs:fit:1024:576:1/g:ce/aHR0cDovL2JsYWNr/bmVyZHByb2JsZW1z/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNi8wNS90dW1i/bHJfbzZueTJoMFlm/ZDF2dDVyNW9vMV8x/MjgwLTEwMjR4NTc2/LmpwZw"
+                class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Capitan america Civil War</h3>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://imgs.search.brave.com/xwKJzpV2ahtakEc6hZZW4qIBm2U8dKJSNVrhsBWLNuo/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pbWFn/ZS50bWRiLm9yZy90/L3AvdzEyODAvbWRX/c1FZVXlDekFKSFRV/aE5yYW5TcVpWZ2du/LmpwZw"
+                class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Terminator 2</h3>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://imgs.search.brave.com/ih2j-JzjU3lfmiLDl0Z44R72TAnxRb0eTHE_2jmLDA8/rs:fit:1200:900:1/g:ce/aHR0cHM6Ly9pczIt/c3NsLm16c3RhdGlj/LmNvbS9pbWFnZS90/aHVtYi9WaWRlbzEx/My92NC8xNC9mYi84/My8xNGZiODMzNC1k/YTVjLTlhN2EtN2Q5/Ny1iZDYyYjhkMzJl/ZDAvNjIyMTA0NDYw/LUVTLUFNUF9TRi5s/c3IvMTYwMHg5MDAu/anBn"
+                class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>El Atlas de las Nubes</h3>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- estrenos cine -->
+  <div class="container" style="background-color: white;">
+
+    <div class="my-3 mb-5">
+      <h2 style="padding: 40px 60px; border-bottom: 2px solid gray; " >RE-ESTRENOS 2022</h2>
+    </div>
+    <div class="d-flex justify-content-sm-center">
+      <div class="row">
+        <div class="card m-3 " style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/h39Q-GOGZzn-lqITVoSVz_cSyyWWfalxD8z_OKGRqug/rs:fit:768:1024:1/g:ce/aHR0cHM6Ly9jZG4u/c2luY3JvZ3VpYS50/di91cGxvYWRzL3By/b2dyYW1zL2cvbC9h/L2dsYWRpYXRvci1w/b3N0ZXItMTUyX1NQ/QS0zNF9WLmpwZw" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Gladiator</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>20 Enero</h6></li>
+            <li class="list-group-item">Accion, historica, Drama</li>
+            <li class="list-group-item"> +16</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/_6Ga-Tw7qxRai9k4eW70dkGDYLQZnmJZo517rZ6ckbw/rs:fit:1087:1200:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly11a2dIVS1pY2Z3/ay9WSGU1anJsTW9a/SS9BQUFBQUFBQUQz/cy9qdWNMYmJHOFlx/OC9zMTYwMC9JbnRl/cnN0ZWxsYXItY2Fy/dGF6LWJyLTMwc2V0/MjAxNC5qcGc" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Intellestelar</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>2 Septiembre</h6></li>
+            <li class="list-group-item">Cinencia Ficción, Drama</li>
+            <li class="list-group-item"> todos los publicos</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/m_B5Vexmi_6W7eMObZ0iVmHYLcOF5b9RlVcaFdFfo8I/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9T/L3B2LXRhcmdldC1p/bWFnZXMvNjQwNzE2/N2Q1ZTI1NGM0M2Nl/MjJjNTg4M2MxMDcz/ZDNlNDBlZjNhOTlh/MjMyNjg3NzFlMzM3/ZjdiNzE5MmNhZi5f/UklfVl9UVFdfLmpw/Zw" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Last Samurai</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>8 Octubre</h6></li>
+            <li class="list-group-item">Accion, Historica, Drama</li>
+            <li class="list-group-item"> +16</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="my-3 mb-5">
+      <h2 style="padding: 40px 60px; border-bottom: 2px solid gray; " >RE-ESTRENOS ANIMACIÓN 20022</h2>
+    </div>
+    <div class="d-flex justify-content-sm-center pb-5">
+      <div class="row">
+        <div class="card m-3 " style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/POI3hB-NKidZEES-wIVwL409PJ902Sf__RYoH6YgFeU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzkxUmsyTWpWbnlM/Ll9SSV8uanBn" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Spiderman in the spider verse</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>21 Septiembre</h6></li>
+            <li class="list-group-item">Cinencia Ficción, Animación, Acción</li>
+            <li class="list-group-item"> todos los publicos</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/FaHjujtpdL8-cjk5SI3JLJbmGCC7pAA2MY1r0YPvFbc/rs:fit:660:938:1/g:ce/aHR0cHM6Ly9zdGF0/aWMubWlyYWhlemUu/b3JnL2Jlc3R0dnNo/b3dzd2lraS90aHVt/Yi8xLzFhL1ByaW1h/bC5qcGVnLzY2MHB4/LVByaW1hbC5qcGVn" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Primal</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>17 Junio</h6></li>
+            <li class="list-group-item">Animación, Acción</li>
+            <li class="list-group-item"> +16</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="https://imgs.search.brave.com/asspxgdpeRzMelj6sxf4OYVWzp037-vN7l-zA00MQyc/rs:fit:1000:1200:1/g:ce/aHR0cDovL3BtMS5u/YXJ2aWkuY29tLzY4/ODcvMTdiMzdlMDg5/ODMyNzUyZTU4ODdm/ODhmYzZiN2VkNzE3/YTY4YWRjNHIxLTEw/MDAtMTUwMHYyX3Vo/cS5qcGc" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Princes Mononoke</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <h6>01 Marzo</h6></li>
+            <li class="list-group-item">Animación, Acción, aventura</li>
+            <li class="list-group-item"> todos los publicos</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">CINES</a>
+            <a href="#" class="card-link">Comprar entradas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white mt-5">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="imdbscript.js"></script>
+</body>
+
+</html>

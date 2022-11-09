@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>imdb</title>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="padding: 0;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark bg-darken-lg" style="padding: 0 20px ;">
+            <a class="navbar-brand text-light" href="IMDB.html"><img
+                    src="img/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE_._V1_-removebg-preview.png" alt="100vh"
+                    width="100vw" height="" style=" padding: 0px 10px; height: 60px;" "></a>
+            <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-sm-between" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="IMDB_Peliculas.html">Peliculas</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-3 my-lg-0 " style="flex-direction: row; display: flex; gap: 10px;">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                            style="color: rgb(219, 219, 21); border: 1px solid yellow;">Search</button>
+                    </form>
+                </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="title d-flex justify-content-between" style="padding: 40px 0px">
+            <h1 class="title"> FILMOGRAFÍA </h1>
+
+            <!-- boton añadir peliculas -->
+            <button type="button" class="btn bg-dark" style="color:rgb(248, 248, 7);" data-bs-toggle="modal"
+                data-bs-target="#orangeModalSubscription" role="button">Añadir Peliculas
+                nuevas</button>
+
+        </div>
+
+        <!-- modal -->
+        <div>
+            <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog"
+                aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-notify modal-warning" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header text-center bg-dark">
+                            <h4 class="modal-title white-text w-100 font-weight-bold py-2" style="color: white;">Nueva
+                                Pelicula</h4>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close" style="margin:10px;"></button>
+                        </div>
+
+                        <!--Body-->
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1" style="margin: 20px 0px 10px 0px;">Títutlo</label>
+                                <input type="text" class="form-control" id="titulo" placeholder="Ejem: Titanic">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1" style="margin: 20px 0px 10px 0px;">Portada</label>
+                                <input type="url" class="form-control" id="portada" placeholder="Imagen en URL">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1" style="margin: 20px 0px 10px 0px;">Año de
+                                    Estreno</label>
+                                <input type="text" class="form-control" id="estreno" placeholder="Ejem: 2010">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1"
+                                    style="margin: 20px 0px 10px 0px;">Nacionalidad</label>
+                                <input type="text" class="form-control" id="nacionalidad" placeholder="Ejem: Spanish">
+                            </div>
+                            <div class="md-form">
+                                <label for="exampleFormControlInput1" style="margin: 20px 0px 10px 0px;">Generos</label>
+                                <input type="text" class="form-control" id="generos"
+                                    placeholder="Ejem: Acción, Aventura, Comedia">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1"
+                                    style="margin: 20px 0px 10px 0px;">Argumento</label>
+                                <textarea class="form-control" id="argumento" rows="3"
+                                    placeholder="Una pequeña descripción sin ¡¡¡SPOILERS!!!"></textarea>
+                            </div>
+                        </div>
+
+
+                        <!--Footer-->
+                        <div class="modal-footer justify-content-center bg-dark">
+                            <a type="button" onclick="añadirPelicula()"
+                                class="btn btn-outline-warning waves-effect close">Añadir</a>
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+
+            <div id="nuevaPelicula">
+            <div class="container" style="padding: 20px 0px ">
+                <div class="card mb-3">
+                    <img class="card-img-top p-3" alt="Card image cap"
+                        src="https://imgs.search.brave.com/Ol49kDKVKl8WSTExOD3vxeJL4wCyVujou4i1scxcLaA/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pMS53/cC5jb20vdmVycGVs/aWN1bGFzbGF0aW5v/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMC8wNi9FTC1V/TFRJTU8tU0FNVVJB/SS5qcGc_Zml0PTEy/ODAlMkM3MjAmc3Ns/PTE"
+                        style="height:500px;">
+                    <div class="card-body">
+                        <h3 class="card-title pb-2">The Last Samurai</h3>
+                        <li class="list-group-item">
+                            <p>Año de estreno</p>
+                            <h5>2003</h5>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Generos</p>
+                            <h6>Acción Historica Drama</h6>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Nacionalidad</p>
+                            <h6>Estadounidense, japoesa</h6>
+                        </li>
+                        <h6 class="card-text p-3">Argumento</h6>
+                        <p class="card-text p-3">El último samurái (The Last Samurai en inglés) es una película de
+                            drama
+                            de acción de época americana de 2003 dirigida y coproducida por Edward Zwick, quien
+                            también
+                            coescribió el guion con John Logan y Marshall Herskovitz. La película está protagonizada
+                            por
+                            Tom Cruise, quien también coprodujo, con Timothy Spall, Ken Watanabe, Billy Connolly,
+                            Tony
+                            Goldwyn, Hiroyuki Sanada, Koyuki y Shin Koyamada en papeles secundarios.
+
+                            Tom Cruise interpreta a un capitán del 7.º Regimiento de Caballería de los Estados
+                            Unidos,
+                            cuyos conflictos personales y emocionales lo ponen en contacto con guerreros samuráis a
+                            raíz
+                            de la Restauración Meiji en el Japón del siglo XIX. La trama de la película se inspiró
+                            levemente en la Rebelión de Satsuma de 1877 liderada por Saigō Takamori y la
+                            occidentalización de Japón por parte de potencias extranjeras, aunque en la película se
+                            retrata a Estados Unidos como la fuerza principal detrás del impulso por la
+                            occidentalización. También está influenciado por las historias de Jules Brunet, un
+                            capitán
+                            del ejército francés que luchó junto a Enomoto Takeaki en la anterior Guerra Boshin y,
+                            en
+                            menor medida, por Frederick Townsend Ward, un mercenario americano que ayudó a
+                            occidentalizar el ejército chino formando el Ejército Siempre Victorioso.
+
+                            El último samurái recaudó un total de $ 456 millones de dólares1​en taquilla y fue bien
+                            recibido en su lanzamiento, recibiendo elogios por la actuación, escritura, dirección,
+                            música, imágenes, vestuario, pero criticado en Japón por romantizar a los samuráis, a
+                            quienes se considera más corruptos. Fue nominado a varios premios, incluidos cuatro
+                            premios
+                            de la Academia, tres premios Golden Globe y dos National Board of Review Awards.</p>
+                        <div class=" d-flex mt-5">
+                            <h4 class="card-title">Actores y Director</h4>
+                        </div>
+                        <div class=" d-flex flex-lg-row gap-5 mt-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Edward_Zwick_2016.jpg/500px-Edward_Zwick_2016.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Director</h6>
+                                    <h4 class="card-title">Edward Zwick</h4>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>Edad</h6> 70 años
+                                    </li>
+                                    <li class="list-group-item">Estadounidense</li>
+                                </ul>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TomCruiseDec08MTV_cropped.jpg/500px-TomCruiseDec08MTV_cropped.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Actor</h6>
+                                    <h5 class="card-title">Tom Cruise</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>Personaje</h6> Nathan Algren
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h6>Edad</h6> 60 años
+                                    </li>
+                                    <li class="list-group-item">Estadounidense</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="padding: 20px 0px ">
+                <div class="card mb-3">
+                    <img class="card-img-top  p-3"
+                        src="https://imgs.search.brave.com/HqdDVw59vVBkPMdN2X99CYlDUzOklO5RNFETpW-hjFs/rs:fit:1024:768:1/g:ce/aHR0cDovL3d3dy5v/bmxpbmVmaWxtdmls/YWcyLmV1L2ltZy9h/cnRpY2xlcy82NS5q/cGc"
+                        style="height:500px;" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Gladiator</h4>
+                        <li class="list-group-item">
+                            <p>Año de estreno</p>
+                            <h5>1992</h5>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Generos</p>
+                            <h6>Acción Historica Drama</h6>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Nacionalidad</p>
+                            <h6>Estadounidense</h6>
+                        </li>
+                        <h6 class="card-text p-3">Argumento</h6>
+                        <p class="card-text p-3">Gladiator (Gladiador en Hispanoamérica y Gladiator en España) es
+                            una
+                            película épica del género péplum y acción del año 2000 dirigida por Ridley Scott y
+                            protagonizada por Russell Crowe, Joaquin Phoenix y Connie Nielsen. Crowe interpreta a
+                            Máximo
+                            Décimo Meridio, un leal general hispano del ejército del Imperio romano que es
+                            traicionado
+                            por Cómodo, el ambicioso hijo del emperador Marco Aurelio, quien ha asesinado a su padre
+                            y
+                            se ha hecho con el trono. Forzado a convertirse en esclavo, Máximo triunfa como
+                            gladiador
+                            mientras anhela vengar la muerte de su familia y la del emperador.
+
+                            Inspirado en un libro sobre los gladiadores del escritor estadounidense Daniel P.
+                            Mannix, el
+                            primer guion de Gladiator fue escrito por David Franzoni y comprado por el estudio de
+                            cine
+                            DreamWorks, que fichó a Ridley Scott para dirigir la película. El rodaje empezó en enero
+                            de
+                            1999, antes de que el guion estuviera completo, y se extendió hasta mayo de ese año. Las
+                            escenas de la Roma antigua se filmaron en el Fuerte Ricasoli de Malta; las imágenes
+                            generadas por ordenador fueron creadas por la empresa británica de efectos visuales The
+                            Mill, que además tuvo la tarea inesperada de crear un doble digital para las escenas que
+                            Oliver Reed no pudo filmar antes de su muerte debida a un infarto.
+
+                            Estrenada el 5 de mayo del 2000, Gladiator fue un éxito tanto entre la crítica
+                            especializada
+                            como entre el público y contribuyó al breve resurgir del cine épico ambientado en la
+                            Antigüedad clásica. La película recibió numerosos premios y nominaciones, incluidos
+                            cinco
+                            premios Óscar en la 73.ª edición de los Premios de la Academia estadounidense, entre los
+                            que
+                            se destaca el de mejor película y mejor actor para Crowe.</p>
+                        <div class=" d-flex mt-5">
+                            <h4 class="card-title">Actores y Director</h4>
+                        </div>
+                        <div class=" d-flex flex-lg-row gap-5 mt-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/NASA_Journey_to_Mars_and_%E2%80%9CThe_Martian%E2%80%9D_%28201508180030HQ%29.jpg/500px-NASA_Journey_to_Mars_and_%E2%80%9CThe_Martian%E2%80%9D_%28201508180030HQ%29.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Actor</h6>
+                                    <h5 class="card-title">Ridley Scott</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>Edad</h6> 84 años
+                                    </li>
+                                    <li class="list-group-item">Británico</li>
+                                </ul>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Russell_Crowe_%2833994246374%29.jpg/440px-Russell_Crowe_%2833994246374%29.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Actor</h6>
+                                    <h5 class="card-title">Russell Crowe</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>Personaje</h6> Máximo Décimo Meridio
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h6>Edad</h6> 58 años
+                                    </li>
+                                    <li class="list-group-item">Neozelandés</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="padding: 20px 0px ">
+                <div class="card mb-3">
+                    <img class="card-img-top p-3" alt="Card image cap"
+                        src="https://imgs.search.brave.com/g-LPff2U2-iYnkYZxMBJBP9x15zbGsInbD9wyzZetls/rs:fit:1200:1200:1/g:ce/aHR0cDovL2hkcXdh/bGxzLmNvbS93YWxs/cGFwZXJzL3NwaWRl/cm1hbi1pbnRvLXRo/ZS1zcGlkZXItdmVy/c2UtbW92aWUtcG9z/dGVyLW10LmpwZw"
+                        style="height:500px;">
+                    <div class="card-body">
+                        <h3 class="card-title pb-2">Spider-Man: Across the Spider-Verse</h3>
+                        <li class="list-group-item">
+                            <p>Año de estreno</p>
+                            <h5>2018</h5>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Generos</p>
+                            <h6>Acción Animación Comedia</h6>
+                        </li>
+                        <li class="list-group-item">
+                            <p>Nacionalidad</p>
+                            <h6>Estadounidense</h6>
+                        </li>
+                        <h6 class="card-text p-3">Argumento</h6>
+                        <p class="card-text p-3">Spider-Man: un nuevo universo (título original en inglés:
+                            Spider-Man:
+                            Into the Spider-Verse) es una película estadounidense de superhéroes animada por
+                            computadora
+                            de 2018, dirigida por Bob Persichetti, Peter Ramsey y Rodney Rothman y escrita por Phil
+                            Lord
+                            y Rothman. La cinta es una adaptación de la línea de cómics Spider-Verse y cuenta con
+                            las
+                            voces de Shameik Moore como Miles Morales/Spider-Man y Liev Schreiber como el villano
+                            Kingpin. Fue producida por Sony Pictures Animation en asociación con Marvel
+                            Entertainment, y
+                            fue estrenada por Columbia Pictures el 14 de diciembre de 2018. Cuenta con la
+                            colaboración
+                            de Post Malone y Swae Lee en su canción "Sunflower" que corresponde a la banda sonora de
+                            la
+                            película.
+
+                            La película tendrá dos secuelas tituladas Spider-Man: Across the Spider-Verse y
+                            Spider-Man:
+                            Beyond the Spider-Verse, que se estrenarán en 2023 y 2024 respectivamente.​</p>
+                        <div class=" d-flex mt-5">
+                            <h4 class="card-title">Actores y Director</h4>
+                        </div>
+                        <div class=" d-flex flex-lg-row gap-5 mt-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peter_Ramsey_by_Gage_Skidmore.jpg/440px-Peter_Ramsey_by_Gage_Skidmore.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Director</h6>
+                                    <h4 class="card-title">Peter Ramsey</h4>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>edad</h6> 59 años
+                                    </li>
+                                    <li class="list-group-item">Estadounidense</li>
+                                </ul>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Shameik_Moore_by_Gage_Skidmore.jpg/440px-Shameik_Moore_by_Gage_Skidmore.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h6 class="card-title">Doblador</h6>
+                                    <h5 class="card-title">Shameik Moore</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <h6>Personaje</h6>Miles Morales/Spider-Man
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h6>Edad</h6> 27 años
+                                    </li>
+                                    <li class="list-group-item">Estadounidense</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white mt-5">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="imdbscript.js"></script>
+</body>
+
+</html>
